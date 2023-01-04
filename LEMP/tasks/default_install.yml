@@ -1,0 +1,4 @@
+---
+
+  - name: clean repos cache
+    shell: yum clean all 
