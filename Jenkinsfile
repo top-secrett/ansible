@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                ansiblePlaybook playbook: 'playbook.yml', inventory: 'host.txt', credentialsId: 'github-ssh-key'
+                ansiblePlaybook playbook: 'playbook.yml', inventory: 'hosts.txt', credentialsId: 'github-ssh-key'
             }
         }
     }
