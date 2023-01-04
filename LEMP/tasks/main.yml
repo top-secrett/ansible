@@ -1,3 +1,2 @@
 ---
 # tasks file for LEMP
-- include_tasks: default_install.yml 
