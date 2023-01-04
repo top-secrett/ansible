@@ -4,6 +4,6 @@
     shell: yum clean all
  
   - name: install default apps
-    shell:
-      cmd: "yum install mc telnet curl nmap htop"
+      shell:
+        cmd: "yum install mc telnet curl nmap htop"
 
