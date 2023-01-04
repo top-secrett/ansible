@@ -2,8 +2,3 @@
 
   - name: clean repos cache
     shell: yum clean all
- 
-  - name: install default apps
-      shell:
-        cmd: "yum install mc telnet curl nmap htop"
-
