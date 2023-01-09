@@ -22,8 +22,8 @@ pipeline {
             steps {
                 git branch: 'main', url: "git@github.com:top-secrett/ansible.git", credentialsId: 'github-ssh-key'
                 // lastChanges since: 'LAST_SUCCESSFUL_BUILD', format:'SIDE',matching: 'LINE'
-                printLn "${GIT_COMMIT}"
-                printLn "${GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
+                echo "${GIT_COMMIT}"
+                echo "${GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
             }
         }
         
