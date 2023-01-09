@@ -15,7 +15,7 @@ pipeline {
         
         stage('git diff'){
             steps {
-                sh 'git diff --name-only $GIT_PREVIOUS_COMMIT'
+                sh 'git diff $GIT_PREVIOUS_COMMIT'
             }
         }
     }
