@@ -27,7 +27,7 @@ pipeline {
                 sh '''
                 #!/bin/bash
                 
-                git diff "${GIT_COMMIT}" "${GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
+                git diff --name-status "${GIT_COMMIT}" "${GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
                 '''    
             }
         }
