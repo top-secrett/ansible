@@ -24,7 +24,11 @@ pipeline {
                 // lastChanges since: 'LAST_SUCCESSFUL_BUILD', format:'SIDE',matching: 'LINE'
                 echo "${GIT_COMMIT}"
                 echo "${GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
-                sh "git diff "${GIT_COMMIT}" "${GIT_PREVIOUS_SUCCESSFUL_COMMIT}""
+                sh '''
+                #!/bin/bash
+                
+                git diff "${GIT_COMMIT}" "${GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
+                '''    
             }
         }
         
