@@ -12,6 +12,12 @@ pipeline {
                 ansiblePlaybook playbook: 'playbook.yml', inventory: 'hosts.txt', credentialsId: 'github-ssh-key'
             }
         }
+        
+        stage('git diff'){
+            steps {
+                sh 'git diff --name-only $GIT_PREVIOUS_COMMIT'
+            }
+        }
     }
     
 }
